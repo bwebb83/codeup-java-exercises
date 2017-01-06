@@ -52,6 +52,10 @@ public class BasicArithmatic {
 
     //method for division
     public static double division(int firstNumber, int secondNumber){
+        if(secondNumber == 0){
+            System.out.println("Cannot divide by zero!");
+            return 0;
+        }
         return (double) firstNumber / secondNumber;
     }
 

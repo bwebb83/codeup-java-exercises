@@ -11,8 +11,8 @@ public class DiceRoll {
         //do while loop to output dice rolls and ask if user wants to go again
         do{
             int userSides = diceSides(scan);
-            int dice1 = diceRoll1(userSides);
-            int dice2 = diceRoll2(userSides);
+            int dice1 = diceRoll(userSides);
+            int dice2 = diceRoll(userSides);
             System.out.println("So you want to roll a " + userSides + " sided dice.");
             System.out.println("The result of the first dice is: " + dice1);
             System.out.println("The result of the first dice is: " + dice2);
@@ -35,12 +35,8 @@ public class DiceRoll {
     }
 
     //method to get a random number for first dice roll
-    public static int diceRoll1(int userSides){
+    public static int diceRoll(int userSides){
         return  (int)(Math.random()*userSides) + 1;
     }
 
-    //method to get random number for second dice roll
-    public static int diceRoll2(int userSides){
-        return (int)(Math.random()*userSides) + 1;
-    }
 }
