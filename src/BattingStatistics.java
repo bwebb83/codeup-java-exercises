@@ -35,7 +35,7 @@ public class BattingStatistics {
             System.out.println("The Slugging Percentage of the player is: " + formatter.format(slugging(basesEarned, atBats)));
 
             //returns the value of goAgain boolean to keepGoing
-            keepGoing = goAgain(keepGoing, scan);
+            keepGoing = validator.goAgain(keepGoing,scan);
 
         } while (keepGoing);
     }
@@ -57,20 +57,6 @@ public class BattingStatistics {
         return (float) sum / atBats;
     }
 
-    //get user input to repeat main
-    public static boolean goAgain(boolean keepGoing, Scanner scan) {
-        System.out.println("Another batter? y/n: ");
-        String answer = scan.nextLine();
-        answer=answer.toLowerCase();
-        if (answer.equals("n")) {
-            System.out.println("Ok bye!");
-            keepGoing = false;
-        } else if (answer.equals("y")) {
-            keepGoing = true;
-        } else {
-            System.out.println("Not a valid key.");
-            return goAgain(keepGoing, scan);
-        }
-        return keepGoing;
-    }
+
+
 }
