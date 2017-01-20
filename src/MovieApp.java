@@ -8,7 +8,7 @@ public class MovieApp {
     public static void main(String[] args) {
         //imports
         Scanner scan = new Scanner(System.in);
-        Validator val = new Validator(scan);
+        Validator validator = new Validator(scan);
         ArrayList<Movie> movies = new ArrayList<>();
         //variable
         boolean keepGoing = true;
@@ -19,7 +19,7 @@ public class MovieApp {
         }
 
         do {
-            int userChoice = val.getIntWithinRange("Welcome!  Choose a category of movie! 1. Animated 2. Drama 3. Horror 4. Scifi", 1, 4);
+            int userChoice = validator.getIntWithinRange("Welcome!  What kind of movie do you want to watch? 1. Animated 2. Drama 3. Horror 4. Scifi", 1, 4);
 
             switch (userChoice) {
                 case 1:
@@ -51,8 +51,10 @@ public class MovieApp {
                     }
                     break;
             }
+            //clear empty string
             scan.nextLine();
-            keepGoing = val.goAgain(keepGoing,scan);
+            //asks user if they want to go again
+            keepGoing = validator.goAgain(keepGoing,scan);
         } while (keepGoing);
     }
 }
