@@ -17,15 +17,10 @@ public class CountTestApp {
         CountUtil.count(sheep,2);
 
         Sheep clone = (Sheep) sheep.clone();
-        clone.resetCount();
         System.out.println("=============================");
         clone.setSheep("Dolly");
         CountUtil.count(clone, 3);
-        sheep.resetCount();
         System.out.println("==============================");
         CountUtil.count(sheep,1);
-
-
-
     }
 }

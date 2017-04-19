@@ -13,9 +13,6 @@ public class Sheep implements Countable, Cloneable{
 
     String sheep;
 
-
-
-
     @Override
     public void incrementCount() {
         sheepCount++;

@@ -9,5 +9,6 @@ public class CountUtil {
             c.incrementCount();
             System.out.println(c.getCountString());
         }
+        c.resetCount();
     }
 }
